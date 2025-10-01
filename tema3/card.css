@@ -1,0 +1,23 @@
+header {
+  font-family: sans-serif;
+  display: flex;
+  background-color: black;
+  color: white;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+   flex:4;
+   padding: 8;
+  font-family: sans-serif;
+}
+
+footer {
+    display: flex;
+  font-family: sans-serif;
+   justify-content: center;
+  align-items: center;
+  background-color: gray;
+  color:white
+}
