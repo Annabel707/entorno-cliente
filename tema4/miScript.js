@@ -141,3 +141,18 @@ for (i=1;i<=6;i++){
   cadenaHTML +=`<h${i}>Encabezado de nivel ${i}</h>`;
 }
 document.write(cadenaHTML);
+
+let confirmar = "si";
+for(i=0;i<=10&& confirmar!=!"no";i++){
+  console.log(i);
+  confirmar=prompt("continuo?(si/no)");
+  
+}
+
+//Bucles anidados
+for(i=1;i<=9;i++){
+    console.log("Tabla de multiplicar del " + i);
+    for(j=1;j<=10;j++){
+        console.log (`${i}X${j}=${i*j}`);
+    }
+}
