@@ -136,4 +136,8 @@ for(i=1;i<=10;i++){
     console.log(`${numerito} X ${i} = ${numerito*i}`);
 }
 
-
+let cadenaHTML=" ";
+for (i=1;i<=6;i++){
+  cadenaHTML +=`<h${i}>Encabezado de nivel ${i}</h>`;
+}
+document.write(cadenaHTML);
