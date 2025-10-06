@@ -165,33 +165,29 @@ insertados, incluyendo esos dos números.
 • Ejemplo de entrada: Inserta el primer número: 10, Inserta el segundo número: 20.
 • Salida esperada: Los números primos entre 10 y 20 son: 11, 13, 17, 19.
 NOTA: NO se pueden usar arrays en este ejercicio*/
-  let x;
-  let y;
-  let grande;
-  let pequeño;
+  let inicio;
+  let final;
+  
   do {
-    x = parseInt(prompt("Introduce el primer numero"));
-  } while (isNaN(x));
+    inicio = parseInt(prompt("Introduce el primer numero"));
+  } while (isNaN(inicio));
   do {
-    y = parseInt(prompt("Introduce el segundo numero"));
-  } while (isNaN(y));
-  if(x>y){
-    grande=x;
-    pequeño=y;
-  }else{
-    grande=y;
-    pequeño=x;
-  }
-  for(i=pequeño;i<=grande;i++){
-    for(j=pequeño;j<=grande;j++){
-        if(i%j==0){
-            console.log("El numero no es primo");
-        }else{
-            
-        }
+    final = parseInt(prompt("Introduce el segundo numero"));
+  } while (isNaN(final));
+ console.log("Los numeros primos entre " + inicio + " y " + final);
+ let i,j;
+ let esPrimo;
+ for(i=inicio;i<=final;i++){
+  esPrimo=true;
+  for(j=2;j<i;j++){
+    if(i%j==0){
+      esPrimo=false;
     }
   }
- 
+ }
+ if(esPrimo){
+  console.log(i);
+ }
 
 }
 
@@ -210,4 +206,35 @@ si es mayor o menor y volver a pedirle otro número
 canceló el juego.
 • Una vez terminado el juego se debe permitir al usuario comenzar un nuevo juego
 usando una ventana de confirmación*/
+let jugar=true;
+let aleatorio= parseInt(Math.random()*(100-1)+1);
+let num;
+let intentos=0;
+while(jugar){
+  do{
+    num=prompt("Introduce el numero");
+    intentos++;
+    if(num==null){
+      console.log("Juego cancelado");
+      return;
+    }
+    if(isNaN(num)){
+      console.log("Eso no es un número. Intenta de nuevo");
+    }else if (aleatorio>num){
+      console.log("El número es más alto");
+    }else if (aleatorio<num){
+      console.log("El número es más bajo");
+    }else if (num ==aleatorio){
+      console.log("¡Correcto!");
+  }
+  
+}while(aleatorio !=num);
+
+alert("Has introducido el número correcto, " + num + " , en " + intentos + " intentos");
+jugar =confirm("¿Quieres volver a jugar?");
+aleatorio=parseInt(Math.random()*(100-1)+1);
+
+
+
+}
 }
