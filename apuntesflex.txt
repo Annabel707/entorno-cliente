@@ -1,0 +1,43 @@
+display: flex | inline-flex //Siempre se comienza una flexbox poniendo el comando
+
+
+justify-content:  //alinea los elementos a lo largo del eje principal
+flex-start || flex-end||center||space-between||space around
+
+
+align-items //alinea los elementos a lo largo del eje transversal
+flex-start || flex-end||center||baseline||stretch
+
+
+flex-direction //define la dirección del eje principal
+row || row-reverse||column||column-reverse
+
+
+Ejemplo usando justify content, align items y flex direction:
+
+
+.container{
+display:flex;
+flex-direction: row-reverse;
+justify-content: center;
+align-items: flex-end;
+}
+order //especifica el orden de los elementos
+cualquier número pej: 1, -9, 5 etc
+
+
+align-self //exactamente igual que align-items pero para cosas en concreto
+flex-start || flex-end||center||baseline||stretch
+
+
+flex-wrap //especifica si los elementos flex son forzados a una línea o varias
+nowrap || wrap||wrap-reverse
+
+
+flex-flow //combina flex-direction y flex-wrap
+row || row-reverse||column||column-reverse
+nowrap || wrap||wrap-reverse
+
+
+align-content //alinea los elementos de un contenedor flex a lo largo del eje transversal
+flex-start || flex-end||center||space-between||space-around||stretch
